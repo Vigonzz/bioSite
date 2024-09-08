@@ -1,0 +1,95 @@
+/* Violet Gonzalez, assignment 6.3 */
+
+body {
+    font-family: 'Space Mono', serif;
+    background-image: url('images/sky.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h1 {
+    color: #49145E;
+    text-align: center;
+    margin-top: 10%;
+}
+
+h2, h3, h4 {
+    color: #49145E;
+}
+
+a {
+    color: #013E62;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #7F888D;
+}
+
+a:visited {
+    color: #5E7A89
+}
+
+.planet-button {
+    position: fixed;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.planet-button a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-me a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-me {
+    text-align: center;
+    background-color: #FFA500; 
+    top: 20px;
+    left: 20px;
+}
+
+.hobbies {
+    text-align: center;
+    background-color: #C0C0C0;
+    bottom: 140px;
+    right: 20px;
+}
+
+.hobbies a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home {
+    text-align: center;
+    background-color: rgb(4, 27, 4);
+    top: 20px;
+    left: 20px;
+}

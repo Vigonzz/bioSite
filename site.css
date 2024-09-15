@@ -13,16 +13,81 @@ body {
     margin-top: 50px;
     margin-left: 100px;
     margin-right: 100px;
+    text-align: center;
+}
+
+#main-image {
+    max-width: 50%;
+    height: 50%;
+    display: block;
+    margin: auto;
+}
+
+.image img {
+    margin-top: 5%;
+    width: 400px;
+    height: 350px;
+}
+
+#picture-gallery {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    margin-top: 5%;
+}
+
+.picture h3 {
+    text-align: center;
+    font-weight: 300;
+    color: white
+}
+
+.picture figure {
+    margin-bottom: 5%;
+    text-align: center;
+    color: #81909B;
+}
+
+.picture img {
+    width: 400px;
+    height: 350px;
+}
+
+.about-me-image img {
+    max-width: 50%;
+    max-height: 50%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.about-me-image figcaption {
+    text-align: center;
+    color: white;
+    font-size: small;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
 }
 
 h1 {
     color: #49145E;
     text-align: center;
     margin-top: 10%;
+    margin: auto;
+    padding-top: 5%;
 }
 
-h2, h3, h4 {
+h2, h4 {
     color: #49145E;
+}
+
+footer {
+    margin-top: 2%;
+    text-align: center;
 }
 
 a {

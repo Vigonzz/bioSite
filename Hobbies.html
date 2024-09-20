@@ -8,52 +8,76 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="hobbies">
     <header> 
         <h1>HOBBIES</h1>
     </header>
-    <div id="container">
-        <div id="picture-gallery">
-            <div class="picture">
-                <figure>
-                    <figcaption>
-                        Nathan skating at a local skate park in Fullerton, CA 
-                    </figcaption>
-                    <img src="images/Skateing.jpg" alt="Nathan Skating">
-                    <h3> Nathan has always loved skating; steaming from his early age in Arizona. No matter where he goes, his love for skating stays.</h3>
-                </figure>
-            </div>
-        
-            <div class="picture">
-                <figure>
-                    <figcaption></figcaption>
-                        Nathan cooking a tasy Meatball dish for a family gathering
-                    </figcaption>
-                    <img src="images/cooking.jpg" alt="Nathan cooking">
-                    <h3> Cooking has not only been a talent but a love of Nathan's. From making the simplest dish to the hardest, he is always cooking to make others smile.</h3>
-                </figure>
-            </div>
-        
-            <div class="picture">
-                <figure>
-                    <figcaption>
-                        Nathan having fun with his friends at his faviorte convention, AnimeExpo!
-                    </figcaption>
-                    <img src="images/AnimeExpo.jpg" src="Nate and Friends">
-                    <h3> As an anual attendie, Nathan has made it a tradition to visit AnimeExpo each year with his friends, to embrace their anime ambitions.</h3>
-                </figure>
-            </div>
-        </div>
-
-        <div class="planet-button about-me">
-            <a href="About_Page.html">About Me</a>
-        </div>
-
-        <div class="planet-button hobbies">
-            <a href="index.html">Home</a>
+    <div class="wrapper">
+        <div class="container">
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="card">
+                <div class="row">
+                    <div class="description">
+                        <h3>Skating</h3>
+                        <p> Nathan has always loved skating; steaming from his early age in Arizona. No matter where he goes, his love for skating stays.</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c2">
+            <label for="c2" class="card">
+                <div class="row">
+                    <div class="description">
+                        <h3>Cooking</h3>
+                        <p>Cooking has not only been a talent but a love of Nathan's. From making the simplest dish to the hardest, he is always cooking to make others smile.</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c3">
+            <label for="c3" class="card">
+                <div class="row">
+                    <div class="description">
+                        <h3>Anime-Expo</h3>
+                        <p> As an anual attendie, Nathan has made it a tradition to visit AnimeExpo each year with his friends, to embrace their anime ambitions.</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c4">
+            <label for="c4" class="card">
+                <div class="row">
+                    <div class="description">
+                        <h3>Hiking</h3>
+                        <p>Going outside for some fresh air is always nice; Nathan excerises this ideal by taking on numerous hiking trails.</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c5">
+            <label for="c5" class="card">
+                <div class="row">
+                    <div class="description">
+                        <h3>Travel</h3>
+                        <p>Exploring the wolrd is a goal and hobbie of Nathans. Although he hasn't gone far, the Channel Islands remains his faviorte adventure.</p>
+                    </div>
+                </div>
+            </label>
         </div>
     </div>
-    <footer></footer>
+
+
+    <div class="top-aligned left">
+        <a href="About_Page.html" class="nav-button">
+            <img src="images/sun.png" alt="About Me">
+            <span>About Me</span>
+        </a>
+    </div>
+
+    <div class="top-aligned right">
+        <a href="index.html" class="nav-button">
+            <img src="images/earth.png" alt="Home">
+            <span>Home</span>
+        </a>
+    </div>
+
+    <footer>
         <a href="https://www.anime-expo.org/ax/">Stay tuned for the next anime expo!</a>
     </footer>
 </body>

@@ -2,11 +2,25 @@
 
 body {
     font-family: 'Space Mono', serif;
-    background-image: url('images/sky.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: 
+        url('images/bettersky.jpg'),
+        url('images/bettersky.jpg'),
+        url('images/bettersky.jpg');
+    background-position: 
+        center,
+        top,
+        center;
+    background-repeat: 
+        repeat,
+        repeat,
+        no-repeat;
+    background-size: 
+        auto,
+        auto,
+        cover;
     background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
 }
 
 #container {
@@ -29,28 +43,103 @@ body {
     height: 350px;
 }
 
-#picture-gallery {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 15px;
-    margin-top: 5%;
+.wrappr {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.picture h3 {
-    text-align: center;
-    font-weight: 300;
-    color: white
+.wrapper {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.picture figure {
-    margin-bottom: 5%;
-    text-align: center;
-    color: #81909B;
+.container {
+    height: 600px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
 }
 
-.picture img {
-    width: 400px;
-    height: 350px;
+.card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 150px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin-top: -5px;
+}
+
+.description h3 {
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+    background-image: url(images/Skateing.jpg);
+}
+
+.card[for="c2"] {
+    background-image: url(images/cooking.jpg);
+}
+
+.card[for="c3"] {
+    background-image: url(images/AnimeExpo.jpg);
+}
+
+.card[for="c4"] {
+    background-image: url(images/Hiking.jpg);
+}
+
+.card[for="c5"] {
+    background-image: url(images/Channel_Islands.jpg);
 }
 
 .about-me-image img {
@@ -73,8 +162,55 @@ body {
     margin-top: 1%;
 }
 
+.top-aligned {
+    position: fixed;
+    top: 20px;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    z-index: 1000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.top-aligned.left {
+    left: 20px;
+}
+
+.top-aligned.left img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.top-aligned.right {
+    right: 20px;
+}
+
+.hobbies.top-aligned.right img {
+    padding-top: 30px;
+    width: 210px;
+    height: 210px;
+    padding-left: 15px;
+}
+
+
+.top-aligned img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
 h1 {
-    color: #49145E;
+    color: #581672;
     text-align: center;
     margin-top: 10%;
     margin: auto;
@@ -86,7 +222,6 @@ h2, h4 {
 }
 
 footer {
-    margin-top: 2%;
     text-align: center;
 }
 
@@ -103,24 +238,22 @@ a:visited {
     color: #5E7A89
 }
 
-.planet-button {
-    position: fixed;
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 1000;
-    cursor: pointer;
-    font-weight: bold;
+.nav-button {
+    position: relative;
+    display: inline-block;
 }
 
-.planet-button a {
-    color: #fff;
-    text-decoration: none;
+.nav-button span {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
     font-weight: bold;
+    font-size: 16px;
+    text-align: center;
 }
 
 .about-me a {
@@ -128,17 +261,29 @@ a:visited {
     font-weight: bold;
 }
 
-.about-me {
-    text-align: center;
-    background-color: #FFA500; 
+body.landing .about-me {
     top: 20px;
     left: 20px;
 }
 
 .hobbies {
-    text-align: center;
     background-color: #C0C0C0;
+}
+
+body.landing .hobbies {
     bottom: 140px;
+    right: 20px;
+}
+
+body.about .about-me {
+    left: 160px;
+}
+
+body.about .hobbies {
+    right: 20px;
+}
+
+body.hobbies .hobbies {
     right: 20px;
 }
 
@@ -153,7 +298,6 @@ a:visited {
 }
 
 .home {
-    text-align: center;
     background-color: rgb(4, 27, 4);
     top: 20px;
     left: 20px;
